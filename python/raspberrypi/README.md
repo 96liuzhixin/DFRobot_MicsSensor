@@ -31,9 +31,9 @@ This Sensor should work with DFRobot_NicsSensor on RaspberryPi. <br>
 Run the program:
 
 ```
-$> python get_mics_data.py
-$> python get_mics_data.py
-$> python get_mics_data.py
+$> python get_gas_exist.py
+$> python get_gas_ppm.py
+$> python get_mics_adc_data.py
 ```
 
 ## Methods
