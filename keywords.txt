@@ -1,0 +1,42 @@
+#######################################
+# Syntax Coloring DFRobot_Mics
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DFRobot_Mics_I2C	KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+calibrationSensor	KEYWORD2
+readSensorData	KEYWORD2
+readGasData	KEYWORD2
+readGasExist	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+ADDRESS_0	LITERAL1
+ADDRESS_1	LITERAL1
+ADDRESS_2	LITERAL1
+ADDRESS_3	LITERAL1
+OX_MODE	LITERAL1
+RED_MODE	LITERAL1
+ERROR	LITERAL1
+EXIST	LITERAL1
+NO_EXIST	LITERAL1
+CO	LITERAL1
+CH4	LITERAL1
+C2H5OH	LITERAL1
+C3H8	LITERAL1
+C4H10	LITERAL1
+H2	LITERAL1
+H2S	LITERAL1
+NH3	LITERAL1
+NO	LITERAL1
+NO2	LITERAL1
