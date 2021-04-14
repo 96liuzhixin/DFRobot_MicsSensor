@@ -28,13 +28,22 @@ DFRobot_Mics_I2C Mics(&Wire ,Mics_I2C_ADDRESS);
 void setup() 
 {
   Serial.begin(115200);
-  while(!Mics.begin())
-  {
+  while(!Mics.begin()){
     Serial.println("NO Deivces !");
     delay(1000);
+  } Serial.println("Device connected successfully !");
+
+  // Gets the power mode of the sensor
+  uint8_t mode = Mics.getPowerState();
+  if(mode == SLEEP_MODE){
+    Serial.println("The sensor is sleep mode");
+    // The sensor is in sleep mode when power is on, so it needs to wake up the sensor. The data obtained in sleep mode is wrong
+    Mics.wakeUpMode();
+    Serial.println("wake up sensor success！");
+  }else{
+    Serial.println("The sensor is wake up mode");
   }
-  Serial.println("Device connected successfully !");
-  
+
   Serial.println("Start calibration Sensor!");
   /* Do not touch the sensor probe when calibrating the sensor.
      Place the sensor in clean air. 
@@ -69,4 +78,5 @@ void loop()
     Serial.println("The gas does not exist!");
   }
   delay(1000);
+  //Mics.sleepMode();
 }

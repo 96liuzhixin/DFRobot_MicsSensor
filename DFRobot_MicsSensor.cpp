@@ -56,6 +56,27 @@ int16_t DFRobot_Mics::readSensorData(uint8_t mode)
 }
 
 
+void DFRobot_Mics::sleepMode(void)
+{
+  uint8_t regData = SLEEP_MODE;
+  writeData(POWER_MODE_REGISTER, &regData, 1);
+  delay(100);
+}
+
+void DFRobot_Mics::wakeUpMode(void)
+{
+  uint8_t regData = WAKE_UP_MODE;
+  writeData(POWER_MODE_REGISTER, &regData, 1);
+  delay(100);
+}
+
+uint8_t DFRobot_Mics::getPowerState(void)
+{
+  uint8_t regData;
+  readData(POWER_MODE_REGISTER, &regData, (uint8_t)1);
+  return regData;
+}
+
 int8_t DFRobot_Mics::readGasExist(uint8_t gas)
 {
   uint16_t oxData[1]    = {0x00};

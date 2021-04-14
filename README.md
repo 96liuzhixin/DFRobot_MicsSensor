@@ -61,7 +61,24 @@ Download the zip file first to use this library and uncompress it to a folder na
   * @return EXIST is gas exist,NO_EXIST is gas no exist.
   */
    int8_t readGasExist(uint8_t gas);
-  
+
+ /*
+  * @brief The sensor goes into sleep mode
+  */
+  void     sleepMode(void);
+
+ /*
+  * @brief The sensor goes into wake up mode
+  */
+  void     wakeUpMode(void);
+
+ /*
+  * @brief Gets the power mode of the sensor
+  * @return mode 
+  *          SLEEP_MODE
+  *          WAKE_UP_MODE
+  */
+  uint8_t  getPowerState(void);
 ```
 ## Compatibility
 

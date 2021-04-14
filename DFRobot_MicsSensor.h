@@ -14,7 +14,10 @@
 #define           RED_REGISTER_LOW          0x07           //
 #define           POWER_REGISTER_HIGH       0x08           //
 #define           POWER_REGISTER_LOW        0x09           //
+#define           POWER_MODE_REGISTER       0x0a           //
 
+#define           SLEEP_MODE                0x00
+#define           WAKE_UP_MODE              0x01
 
 #define           OX_MODE                   0x00
 #define           RED_MODE                  0x01
@@ -43,6 +46,9 @@ public:
   int16_t  readSensorData(uint8_t mode);
   float    readGasData(uint8_t type);
   int8_t   readGasExist(uint8_t gas);
+  void     sleepMode(void);
+  void     wakeUpMode(void);
+  uint8_t  getPowerState(void);
 private:
   int16_t  __r0_ox   = 0;
   int16_t  __r0_red  = 0;

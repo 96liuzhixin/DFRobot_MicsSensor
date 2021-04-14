@@ -16,6 +16,9 @@ calibrationSensor	KEYWORD2
 readSensorData	KEYWORD2
 readGasData	KEYWORD2
 readGasExist	KEYWORD2
+getPowerState	KEYWORD2
+wakeUpMode	KEYWORD2
+sleepMode	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -40,3 +43,5 @@ H2S	LITERAL1
 NH3	LITERAL1
 NO	LITERAL1
 NO2	LITERAL1
+SLEEP_MODE	LITERAL1
+WAKE_UP_MODE	LITERAL1
